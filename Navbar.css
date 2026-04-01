@@ -1,0 +1,116 @@
+/* Navbar base */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Glassmorphism */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem 2rem; /* padding for taller navbar */
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Container: logo left, links centered */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center nav links horizontally */
+  gap: 2rem;
+  position: relative;
+}
+
+/* Logo positioned left */
+.logo {
+  position: absolute;
+  left: 2rem;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 1.6rem;
+  color: #6A0DAD;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #8B2DD1;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav item */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #6A0DAD;
+}
+
+/* Static icons */
+.icon {
+  font-size: 1rem;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #6A0DAD;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25); /* Glass effect mobile */
+    backdrop-filter: blur(10px);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    padding: 0.5rem 2rem;
+    text-align: center;
+  }
+
+  .logo {
+    left: 1rem;
+  }
+}

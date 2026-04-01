@@ -1,0 +1,146 @@
+/* Page Container */
+.courses-page {
+  margin: 40px auto;
+  text-align: center;
+  max-width: 1000px;
+  padding: 20px;
+  background: white; /* soft clay base */
+  border-radius: 30px;
+  
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center; /* center the breadcrumb */
+  gap: 5px;
+  font-weight: 500;
+}
+
+.breadcrumb a {
+  color: #7b5cff; /* purple link */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  color: #5a3bcc; /* darker purple on hover */
+}
+
+.breadcrumb span {
+  color: #555; /* current page */
+}
+
+/* Headings */
+.courses-page h2 {
+  font-size: 32px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.courses-page p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Learning Highlights */
+.learning-highlights {
+  margin-bottom: 40px;
+  text-align: center; /* center the content */
+  color: #555;
+}
+
+.learning-highlights h3 {
+  color: #7b5cff; /* purple highlight */
+  margin-bottom: 15px;
+}
+
+.learning-highlights ul {
+  list-style: none; /* remove default bullets */
+  padding-left: 0;
+}
+
+.learning-highlights li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+/* Custom bullet */
+.learning-highlights li::before {
+  content: "•";
+  color: #7b5cff;
+  position: absolute;
+  left: 0;
+}
+
+/* Courses Grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Clay Card */
+.clay-card {
+  padding: 25px;
+  border-radius: 20px;
+  background:white; /* light clay color */
+  text-align: center;
+  box-shadow: 6px 6px 12px #c5c0e0, -6px -6px 12px #ffffff;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.clay-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #7b5cff, 6px 6px 12px #b8b0e0, -6px -6px 12px #ffffff; /* purple glow */
+}
+
+/* Card Text */
+.clay-card h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.clay-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Subject Icon */
+.subject-icon {
+  font-size: 40px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* Why Choose Section */
+.why-choose {
+  margin-top: 30px;
+  text-align: center; /* center content */
+}
+
+.why-choose h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.why-choose p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 800px; /* limit width for readability */
+  margin: 0 auto; /* center paragraph */
+}
+.breadcrumb .separator {
+  color: #555;       /* same as current page */
+  margin: 0 5px;     /* spacing around the > */
+}

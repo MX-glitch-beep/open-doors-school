@@ -1,0 +1,129 @@
+/* About Page Container */
+.about-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+/* Clay Card Base – Shadow Removed */
+.clay-card {
+  background-color: #f3f0ff; /* flat solid color */
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.3s ease; /* keeps smooth hover transitions if needed */
+  /* box-shadow removed for flat design */
+}
+
+/* School Intro */
+.about-text h1 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  padding: 1rem 2rem;
+  background-color: #7b5cff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #6846d1; /* optional subtle hover */
+}
+
+/* Secondary Button – narrower */
+.btn-secondary {
+  padding: 0.75rem 1.5rem; /* narrower than primary */
+  background-color: #fff;
+  color: #7b5cff;
+  border: 2px solid #7b5cff;
+}
+
+.btn-secondary:hover {
+  background-color: #7b5cff;
+  color: #fff;
+  transform: scale(1.05); /* optional subtle hover */
+}
+
+/* Staff & Prefect Cards */
+.staff-cards,
+.prefects-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.staff-card,
+.prefect-card {
+  max-width: 300px;
+  text-align: center;
+  background-color: #f3f0ff; /* flat solid color */
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Staff Photos */
+.staff-photo {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Headings & Text */
+.staff-card h3,
+.prefect-card h3 {
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.staff-card p,
+.prefect-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Section Titles */
+.staff-section h2,
+.prefects-section h2 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .staff-cards,
+  .prefects-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,86 @@
+/* ===============================
+   GLOBAL VARIABLES
+   =============================== */
+:root {
+  --primary: #1e3a8a;
+  --text-dark: #1e2a38;
+  --text-light: #6b7280;
+  --bg-light: #f7f9fc;
+  --white: #ffffff;
+
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 80px;
+}
+
+/* ===============================
+   RESET + BODY
+   =============================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Important for full-page background */
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-light) no-repeat center center fixed;
+  background-size: cover; /* Makes it cover the entire page */
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* ===============================
+   APP STRUCTURE
+   =============================== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures container always fills viewport */
+  background: transparent; /* inherit from body */
+}
+
+.page-content {
+  flex: 1;
+  padding: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+button.primary {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 12px 26px;
+}
+
+button.primary:hover {
+  background-color: #162d6b;
+}
+
+button.secondary {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 12px 26px;
+}
+
+button.secondary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}

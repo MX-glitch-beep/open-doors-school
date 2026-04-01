@@ -1,0 +1,143 @@
+/* Floating toggle button (kept same) */
+.ai-chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #a6e3ff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  z-index: 1000;
+  box-shadow: 8px 8px 16px #b0c4de, -8px -8px 16px #ffffff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ai-chat-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 12px #b0c4de, -6px -6px 12px #ffffff;
+}
+
+/* Chat widget container */
+.ai-chat-widget {
+  position: fixed;
+  bottom: 90px; /* above the toggle button */
+  right: 20px;
+  width: 320px;
+  border-radius: 24px;
+  background: #e0f7ff; /* pastel base */
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 12px 12px 24px #c0d4e0, -12px -12px 24px #ffffff;
+  
+  /* Hidden by default */
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+/* Show the widget */
+.ai-chat-widget.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Header */
+.chat-header {
+  background: #b3e0ff;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 24px 24px 0 0;
+  box-shadow: inset 4px 4px 8px #c0d4e0, inset -4px -4px 8px #ffffff;
+}
+
+/* Chat messages */
+.chat-body {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 12px;
+  flex: 1;
+}
+
+/* Bot message */
+.bot-msg {
+  background: #d0f0ff;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  box-shadow: 6px 6px 12px #b0c4de, -6px -6px 12px #ffffff;
+}
+
+/* User message */
+.user-msg {
+  background: #a6e3ff;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  color: #000;
+  text-align: right;
+  box-shadow: 6px 6px 12px #b0c4de, -6px -6px 12px #ffffff;
+}
+
+/* Footer input and button */
+.chat-footer {
+  display: flex;
+  padding: 8px;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  background: #e0f7ff;
+  box-shadow: inset 4px 4px 8px #c0d4e0, inset -4px -4px 8px #ffffff;
+}
+
+.chat-footer button {
+  margin-left: 8px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: none;
+  background: #b3e0ff;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 6px 6px 12px #b0c4de, -6px -6px 12px #ffffff;
+}
+
+/* WhatsApp fallback */
+.whatsapp-fallback {
+  padding: 12px;
+  border-radius: 0 0 24px 24px;
+  text-align: center;
+  background: #d0f0ff;
+  box-shadow: inset 4px 4px 8px #c0d4e0, inset -4px -4px 8px #ffffff;
+}
+
+.whatsapp-fallback a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 16px;
+  font-weight: bold;
+  margin-top: 6px;
+  box-shadow: 4px 4px 8px #1e9a4d, -4px -4px 8px #36ef70;
+}
+
+.whatsapp-fallback .whatsapp-icon {
+  margin-right: 6px;
+  font-size: 20px;
+}
